@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <title>GUIDANCE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<body style="max-width:600px">
+  <nav class="w3-sidebar w3-bar-block w3-card" id="mySidebar">
+  <div class="w3-container w3-theme-d2">
+    <span onclick="closeSidebar()" class="w3-button w3-display-topright w3-large">X</span>
+    <br>
+    <div class="w3-padding w3-center">
+      <img class="w3-circle" src="" alt="" style="width:75%">
+    </div>
+  </div>
+    <a class="w3-bar-item w3-button" href="#" onclick="openHome()">Home</a>
+    <a class="w3-bar-item w3-button" href="#" onclick="openStudy()">Study</a>
+    <a class="w3-bar-item w3-button" href="#" onclick="openGuidance()">Daily Guidance</a>
+    <a class="w3-bar-item w3-button" href="#" onclick="openNews()">News</a>
+  </nav>
+
+  <header class="w3-bar w3-card w3-theme">
+    <button class="w3-bar-item w3-button w3-xxxlarge w3-hover-theme" onclick="openSidebar()">&#9776;</button>
+    <h1 class="w3-bar-item">GUIDANCE</h1>
+  </header>
+
+  <!--Start of main text-->
+  <div class="w3-container">
+  <hr>
+      Click link below to view "Daily Encouragement" on Soka Global Website:
+    <hr>
+      <button class="w3-btn w3-theme"><a href="https://www.sokaglobal.org/resources/daily-encouragement/february-28.html">DAILY ENCOURAGEMENT</a></button>
+
+  </div>
+
+
+
+  <script>
+  closeSidebar();
+  function openSidebar() {
+    document.getElementById("mySidebar").style.display = "block";
+  }
+
+  function closeSidebar() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
+
+  function openHome() {
+    window.location="home.html";
+  }
+
+   function openStudy() {
+    window.location="study.html";
+  }
+
+  function openGuidance() {
+    window.location="guidance.html";
+  }
+
+  function openNews() {
+    window.location="news.html";
+  }
+  </script>
+
+</body>
+</html>

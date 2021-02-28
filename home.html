@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <title>TEST PAGE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <style>
+  .heart {
+    width: 100px;
+    height: 100px;
+    background: url("heart.png") no-repeat;
+    background-position: 0 0;
+    cursor: pointer;
+    transition: background-position 1s steps(28);
+    transition-duration: 0s;
+  }
+
+
+  .heart.is-active {
+    transition-duration: 0.5s;
+    background-position: -2800px 0;
+  }
+
+  .stage {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+
+   .counter-item
+   {
+    background-color: #ccc;
+    padding: 10px;
+   }
+  }
+  </style>
+
+<body style="max-width:600px">
+  <nav class="w3-sidebar w3-bar-block w3-card" id="mySidebar">
+  <div class="w3-container w3-theme-d2">
+    <span onclick="closeSidebar()" class="w3-button w3-display-topright w3-large">X</span>
+    <br>
+    <div class="w3-padding w3-center">
+      <img class="w3-circle" src="" alt="" style="width:75%">
+    </div>
+  </div>
+    <a class="w3-bar-item w3-button" href="#" onclick="openHome()">Home</a>
+    <a class="w3-bar-item w3-button" href="#" onclick="openStudy()">Study</a>
+    <a class="w3-bar-item w3-button" href="#" onclick="openGuidance()">Daily Guidance</a>
+    <a class="w3-bar-item w3-button" href="#" onclick="openNews()">News</a>
+  </nav>
+
+  <header class="w3-bar w3-card w3-theme">
+    <button class="w3-bar-item w3-button w3-xxxlarge w3-hover-theme" onclick="openSidebar()">&#9776;</button>
+    <h1 class="w3-bar-item">TIG YOUTH</h1>
+  </header>
+  <div class="w3-container" align="center">
+    <h4><b>Total Dialogues:</b></h4>
+  </div>
+  <!--Start of main text-->
+  <div class="w3-container" align="center">
+    <span class="w3-tag w3-xlarge">0</span>
+    <span class="w3-tag w3-xlarge">0</span>
+    <span class="w3-tag w3-xlarge">0</span>
+    <br>
+    <p><font size="2">Last updated: 2021/02/28. You can send us your dialogue photos at <a href="mailto: xyz@gmail.com?subject=TIG%20CAMPAIGN">xyz@gmail.com</a></font></p>
+  </div>
+
+  <!--Divider of main text-->
+<!--  <footer class="w3-container w3-theme w3-margin-top">-->
+<!--    <h3>DIALOGUE COUNTER</h3>-->
+<!--  </footer>-->
+
+  <!--Push Button-->
+  <div class="w3-container" align="center">
+    <b class="w3-text-theme">For each dialogue conducted, click on the heart below:</b>
+<!--    <button class="w3-button w3-blue-grey" id="clickme" onclick="openClick()">Click Here</button>-->
+    <div class="heart" id = "clickme" onclick="openclick()"></div>
+    <button class="w3-button w3-blue-grey" id="display">Study Dialogues</button>
+  </div>
+
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+  <script>
+  closeSidebar();
+  function openSidebar() {
+    document.getElementById("mySidebar").style.display = "block";
+  }
+
+  function closeSidebar() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
+
+  function openHome() {
+    window.location="home.html";
+  }
+
+   function openStudy() {
+    window.location="study.html";
+  }
+
+  function openGuidance() {
+    window.location="guidance.html";
+  }
+
+  function openNews() {
+    window.location="news.html";
+  }
+
+
+  var count = 0;
+  var heart = document.getElementById('clickme');
+  var display = document.getElementById('display');
+
+
+  heart.onclick = function()
+  {
+    if (count==0)
+    {
+      count = count + 1;
+      display.innerHTML = "You Entered: " + count + " New Dialogue";
+      heart.classList.toggle("is-active");
+    }
+
+    else
+    {
+     count = count + 1;
+     real_count = parseInt(count/2 + 0.5);
+     display.innerHTML = "You Entered: " + real_count + " New Dialogues";
+     heart.classList.toggle("is-active");
+     }
+  };
+
+
+  </script>
+
+</body>
+</html>

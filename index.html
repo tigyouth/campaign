@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <title>INDEX</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    #title{
+	color: white;
+	-webkit-text-stroke: 1px #282828;
+
+
+  </style>
+
+<body style="max-width:600px">
+  <header class="w3-bar w3-card w3-theme">
+    <button class="w3-bar-item w3-button w3-xxxlarge w3-hover-theme" onclick="#"><i class="fa fa-globe"></i></button>
+    <h1 class="w3-bar-item" id="title">
+      <b>
+      <span style='color: blue'>T</span>
+      <span style='color: yellow'>I</span>
+      <span style='color: red'>G</span>
+      </b>
+    </h1>
+  </header>
+
+  <div class="w3-container" align="center">
+    <br>
+   *** Study & Dialogue Campaign ***
+    <br>
+    TIG YOUTH
+    <br>
+    <i>"Expanding, advancing as one"</i>
+  </div>
+
+  <!--Start of main text-->
+  <div class="w3-container">
+      <hr>
+      <form id="form_login"; align="center">
+      <input type=button class = "w3-btn w3-theme" value="LOGIN" onClick="LogIn()">
+  </div>
+
+  <hr>
+  <div class="w3-container">
+    <b>Please Read Carefully</b>
+    <p><font size="2">
+      1. TIG Dialogue Counter is an application for TIG youth to record the total dialogues during the 2021 Study & Dialogue Campaign.<br/>
+      2. A single login session to this application expires in 90 seconds and the counter resets after session expires. But don't worry, we record your every click.<br/>
+      3. This application is exclusive to TIG Youth. So please refrain from sharing in your home country.<br/><br>
+      Above all, please enjoy having heart-to-heart dialogues and updating them with this app :)
+    </font></p>
+  </div>
+
+
+
+  <script>
+  closeSidebar();
+  function openSidebar() {
+    document.getElementById("mySidebar").style.display = "block";
+  }
+
+  function closeSidebar() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
+
+  function LogIn(){
+	loggedin=false;
+	username="";
+	password="";
+	username=prompt("Username:","");
+	username=username.toLowerCase();
+	password=prompt("Password:","");
+	password=password.toLowerCase();
+	if (username=="march" && password=="16")
+	    {
+        loggedin=true;
+        window.location="home.html";
+        }
+	if (loggedin==false)
+        {
+        alert("Invalid login!");
+        }
+  }
+
+  </script>
+
+</body>
+</html>
